@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="aa">quanp</button>
+</body>
+</html>
+<script>
+
+    function full(){
+        var element = document.documentElement;  
+        if(element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if (element.mozRequestFullScreen){   // 兼容火狐
+            element.mozRequestFullScreen();
+        } else if(element.webkitRequestFullscreen) {    // 兼容谷歌
+            element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) {   // 兼容IE
+            element.msRequestFullscreen();
+        }
+    }
+    function exitFull() {
+        if(document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+    function isFull(){
+        return document.isFullScreen || document.mozIsFullScreen || document.webkitIsFullScreen
+    }
+    aa.onclick= ()=>{
+        if(isFull()){
+            exitFull();
+            return
+        }
+        full();
+    }
+    //aa.onclick=()=>{
+
+ //   }
+
+</script>

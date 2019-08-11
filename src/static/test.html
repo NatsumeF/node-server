@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src= "https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<body>
+    <button id="get">get</button>
+
+    <textarea name="" id="value" cols="30" rows="10"></textarea>
+    <button id="post">post</button>
+</body>
+<script>
+    $("#get").on("click",()=>{
+        $.get("http://localhost:8099/config",(data)=>{
+            console.log(data);
+        })
+    })
+    $("#post").on("click",()=>{
+        let value = $("#value").val().trim();
+        $.post("http://localhost:8099/config",{value},(data)=>{
+            console.log(data);
+        })
+    })
+
+
+</script>
+</html>
