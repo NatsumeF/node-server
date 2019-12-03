@@ -1,10 +1,5 @@
- const serverPort ="80"; 
+ const serverPort = "80";
 
-
-
-
-
-
-module.exports = {
-    serverPort
-  };
+ module.exports = {
+     serverPort
+ };
