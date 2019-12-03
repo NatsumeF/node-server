@@ -6,5 +6,10 @@
     "log4js": "^4.5.1",
     "koa-bodyparser": "^4.2.1",
     "koa-compose": "^4.1.0"
+  },
+  "dependencies": {
+    "formidable": "^1.2.1",
+    "glob": "^7.1.6",
+    "koa2-formidable": "^1.0.2"
   }
 }
