@@ -9,9 +9,9 @@ const cors = require("koa-cors");
 
 const app = new Koa();
 app.use(cors());
-app.use(static('./static'));
 app.use(bodyParser());
 app.use(registerRouter())
+app.use(static('./static'));
 app.listen(serverPort, () => {
     console.log(`App started on http://localhost:${serverPort}`)
 });
